@@ -1,0 +1,6 @@
+data_img/
+__pycache__/
+*.pyc
+.vscode/
+attendance.csv
+clf.xml
