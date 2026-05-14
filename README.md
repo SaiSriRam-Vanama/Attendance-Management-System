@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🏫 Attendance Management System
+# Attendance Management System
 
-### 📸 Facial Recognition Based Smart Attendance Solution
+### Facial Recognition Based Smart Attendance Solution
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)
 ![Tkinter](https://img.shields.io/badge/GUI-Tkinter-FF6F00)
@@ -19,57 +19,56 @@ Captures faces via webcam, trains a recognizer model, and marks attendance in re
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Database Setup](#-database-setup)
-- [Usage Guide](#-usage-guide)
-- [Screenshots](#-screenshots)
-- [UI Theme](#-ui-theme)
-- [Troubleshooting](#-troubleshooting)
-- [License](#-license)
-- [Contact](#-contact)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Database Setup](#database-setup)
+- [Usage Guide](#usage-guide)
+- [UI Theme](#ui-theme)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
-## ✨ Features
+## Features
 
 <details>
 <summary><b>Click to expand</b></summary>
 
-### 🔐 Authentication
+### Authentication
 - Secure login system with username/password
 - Teacher registration with security questions
 - Forgot password recovery via security questions
 
-### 👨‍🎓 Student Management
+### Student Management
 - Full CRUD operations (Add, Update, Delete, Reset)
 - Search students by Roll Number
 - Student details: ID, Name, Department, Course, Year, Semester, Division, Gender, DOB, Email, Mobile, Address, Tutor
 
-### 📸 Face Capture & Training
+### Face Capture & Training
 - Capture 100 face samples per student via webcam
 - Automatic face detection using Haar Cascade
 - LBPH (Local Binary Patterns Histograms) model training
 - Generates `clf.xml` classifier file
 
-### ✅ Real-Time Attendance
+### Real-Time Attendance
 - Live webcam face detection and recognition
 - 77% confidence threshold for accurate matching
 - Auto-marks attendance in CSV with timestamp
 - Displays Student ID, Name, and Roll No on video feed
 
-### 📊 Attendance Reports
+### Attendance Reports
 - View attendance records in table format
 - Import attendance from CSV files
 - Export attendance to CSV files
 - Store attendance in MySQL database
 - Update/Delete attendance records
 
-### 👨‍💻 Developer Info
+### Developer Info
 - Team member profiles with images
 - Quick links to Website, YouTube, Facebook, Gmail
 
@@ -77,7 +76,7 @@ Captures faces via webcam, trains a recognizer model, and marks attendance in re
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -91,53 +90,53 @@ Captures faces via webcam, trains a recognizer model, and marks attendance in re
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Attendance-Management-System/
 │
-├── 📄 main.py                 # 🏠 Main dashboard (8-button control panel)
-├── 📄 login.py                # 🔑 Login screen with auth
-├── 📄 register.py             # 📝 Teacher registration
-├── 📄 student.py              # 👨‍🎓 Student CRUD + face capture
-├── 📄 train.py                # 🧠 Train LBPH face recognizer
-├── 📄 face_recognition.py     # ✅ Real-time attendance marking
-├── 📄 attendance.py           # 📊 Attendance records & CSV I/O
-├── 📄 developer.py            # 👨‍💻 Developer profiles
-├── 📄 helpsupport.py          # ❓ Help & social links
-├── 📄 databaseTest.py         # 🔌 MySQL connection tester
+├── main.py                 # Main dashboard (8-button control panel)
+├── login.py                # Login screen with auth
+├── register.py             # Teacher registration
+├── student.py              # Student CRUD + face capture
+├── train.py                # Train LBPH face recognizer
+├── face_recognition.py     # Real-time attendance marking
+├── attendance.py           # Attendance records & CSV I/O
+├── developer.py            # Developer profiles
+├── helpsupport.py          # Help & social links
+├── databaseTest.py         # MySQL connection tester
 │
-├── 📄 requirements.txt        # 📦 Python dependencies
-├── 📄 README.md               # 📖 Project documentation
-├── 📄 LICENSE                 # ⚖️ MIT License
-├── 📄 .gitignore              # 🙈 Git ignore rules
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+├── LICENSE                 # MIT License
+├── .gitignore              # Git ignore rules
 │
-├── 🖼️ Images_GUI/             # UI assets (banners, icons, backgrounds)
-│   ├── banner.jpg             # Header banner image
-│   ├── bg3.jpg                # Main dashboard background
-│   ├── log1.png               # Login icon
-│   ├── std1.jpg               # Student panel icon
-│   ├── det1.jpg               # Face detector icon
-│   ├── att.jpg                # Attendance icon
-│   ├── hlp.jpg                # Help icon
-│   ├── tra1.jpg               # Train icon
-│   ├── qr1.png                # QR codes icon
-│   ├── dev.jpg                # Developers icon
-│   ├── exi.jpg                # Exit icon
-│   ├── ...and more            # Additional UI assets
+├── Images_GUI/             # UI assets (banners, icons, backgrounds)
+│   ├── banner.jpg          # Header banner image
+│   ├── bg3.jpg             # Main dashboard background
+│   ├── log1.png            # Login icon
+│   ├── std1.jpg            # Student panel icon
+│   ├── det1.jpg            # Face detector icon
+│   ├── att.jpg             # Attendance icon
+│   ├── hlp.jpg             # Help icon
+│   ├── tra1.jpg            # Train icon
+│   ├── qr1.png             # QR codes icon
+│   ├── dev.jpg             # Developers icon
+│   ├── exi.jpg             # Exit icon
+│   ├── ...and more         # Additional UI assets
 │
-├── 📸 data_img/               # Captured face samples (auto-generated)
+├── data_img/               # Captured face samples (auto-generated)
 │
-├── 📷 haarcascade_frontalface_default.xml  # Face detection model
-├── 🧠 clf.xml                 # Trained recognizer model (auto-generated)
-└── 📋 attendance.csv          # Attendance log file (auto-generated)
+├── haarcascade_frontalface_default.xml  # Face detection model
+├── clf.xml                 # Trained recognizer model (auto-generated)
+└── attendance.csv          # Attendance log file (auto-generated)
 ```
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-### ✅ Prerequisites
+### Prerequisites
 
 | Requirement | Version | Download |
 |-------------|---------|----------|
@@ -145,21 +144,21 @@ Attendance-Management-System/
 | MySQL Server | 8.0+ | [mysql.com](https://mysql.com) |
 | Webcam | Built-in / USB | - |
 
-### 📥 Step 1: Clone Repository
+### Step 1: Clone Repository
 
 ```bash
 git clone https://github.com/SaiSriRam-Vanama/Attendance-Management-System.git
 cd Attendance-Management-System
 ```
 
-### 📦 Step 2: Install Dependencies
+### Step 2: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
 <details>
-<summary><b>📄 requirements.txt contents</b></summary>
+<summary><b>requirements.txt contents</b></summary>
 
 ```text
 opencv-python==4.8.1.78
@@ -173,7 +172,7 @@ numpy==1.24.3
 
 ---
 
-## 🗄️ Database Setup
+## Database Setup
 
 ### Step 1: Create Database
 
@@ -185,7 +184,7 @@ USE face_recognition;
 ### Step 2: Create Tables
 
 ```sql
--- 👨‍🏫 Teachers table (for login/registration)
+-- Teachers table (for login/registration)
 CREATE TABLE regteach (
     fname VARCHAR(50),
     lname VARCHAR(50),
@@ -196,7 +195,7 @@ CREATE TABLE regteach (
     pwd VARCHAR(50)
 );
 
--- 👨‍🎓 Students table
+-- Students table
 CREATE TABLE student (
     Student_ID VARCHAR(20) PRIMARY KEY,
     Name VARCHAR(50),
@@ -215,7 +214,7 @@ CREATE TABLE student (
     PhotoSample VARCHAR(10)
 );
 
--- 📋 Attendance table
+-- Attendance table
 CREATE TABLE stdattendance (
     std_id VARCHAR(20),
     std_roll_no VARCHAR(20),
@@ -240,9 +239,9 @@ Update credentials in all `.py` files if your setup differs:
 
 ---
 
-## 🚀 Usage Guide
+## Usage Guide
 
-### 🔐 First Time Setup
+### First Time Setup
 
 ```bash
 python login.py
@@ -253,38 +252,38 @@ python login.py
 | 1 | **Register** | Create a teacher account (or use `admin`/`admin`) |
 | 2 | **Login** | Enter credentials to access the dashboard |
 
-### 👨‍🎓 Adding Students
+### Adding Students
 
 ```mermaid
 graph LR
     A[Dashboard] --> B[Student Panel]
     B --> C[Fill Details]
     C --> D[Save to DB]
-    D --> E[Take Pic 📸]
+    D --> E[Take Pic]
     E --> F[100 Samples Captured]
 ```
 
 1. Click **Student Panel** from dashboard
 2. Fill all fields (ID, Name, Department, Course, etc.)
 3. Click **Save** to store in database
-4. Click **Take Pic** – webcam captures 100 face samples automatically
+4. Click **Take Pic** - webcam captures 100 face samples automatically
 
-### 🧠 Training the Model
+### Training the Model
 
 1. Click **Data Train** from dashboard
 2. Click **Train Dataset** button
 3. LBPH model trains on all captured face samples
 4. Generates `clf.xml` classifier file
 
-### ✅ Marking Attendance
+### Marking Attendance
 
 1. Click **Face Detector** from dashboard  
 2. Webcam activates with real-time face detection
-3. **Confidence > 77%** → Student identified ✅
-4. **Confidence ≤ 77%** → "Unknown Face" ❌
+3. **Confidence > 77%** - Student identified
+4. **Confidence <= 77%** - "Unknown Face"
 5. Attendance auto-saved to `attendance.csv`
 
-### 📊 Viewing Reports
+### Viewing Reports
 
 1. Click **Attendance** from dashboard
 2. **Left Panel:** Import/Export CSV attendance
@@ -294,25 +293,25 @@ graph LR
 
 ---
 
-## 🎨 UI Theme
+## UI Theme
 
 ```text
-🎨 Color Palette
-├── 🔵 Primary:   #1a1a2e  (Dark Navy)
-├── 🔴 Accent:    #e94560  (Crimson Red)
-├── 🔷 Secondary: #16213e  (Deep Blue)
-├── ⚪ Light:     #FFFFFF  (White)
-└── 🔤 Font:      Segoe UI (Modern Sans-Serif)
+Color Palette
+- Primary:   #1a1a2e  (Dark Navy)
+- Accent:    #e94560  (Crimson Red)
+- Secondary: #16213e  (Deep Blue)
+- Light:     #FFFFFF  (White)
+- Font:      Segoe UI (Modern Sans-Serif)
 ```
 
 - **Flat design** buttons with hover effects
 - **Consistent padding** and spacing across all panels
 - **Treeview tables** with scrollable content
-- **Responsive layouts** for 1366×768 resolution
+- **Responsive layouts** for 1366x768 resolution
 
 ---
 
-## ❗ Troubleshooting
+## Troubleshooting
 
 | # | Error | Cause | Solution |
 |---|-------|-------|----------|
@@ -326,7 +325,7 @@ graph LR
 
 ---
 
-## ⚖️ License
+## License
 
 ```text
 MIT License
@@ -354,7 +353,7 @@ SOFTWARE.
 
 ---
 
-## 📬 Contact
+## Contact
 
 **Developer:** Sai SriRam Vanama  
 **Email:** [saisriram2796@gmail.com](mailto:saisriram2796@gmail.com)  
@@ -365,8 +364,8 @@ SOFTWARE.
 
 <div align="center">
 
-**Made with ❤️ for smarter attendance management**
+**Made for smarter attendance management**
 
-⭐ If you found this project useful, please consider giving it a star!
+If you found this project useful, please consider giving it a star!
 
 </div>
